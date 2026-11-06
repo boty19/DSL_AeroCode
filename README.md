@@ -23,11 +23,11 @@ si (bateria < 20) {
 
 El proyecto tiene tres fases. Cada una se apoya en la anterior:
 
-| Fase | Qué define | Herramienta formal | Documento |
-| --- | --- | --- | --- |
-| 1. Formalismo léxico | Qué piezas (tokens) existen | Alfabeto, expresiones regulares, AFD | [Fase 1](https://claude.ai/artifact/GgK6b9sPpmPnYjdsA8ZSga) |
-| 2. Estructura sintáctica | En qué orden pueden ir los tokens | Gramática independiente del contexto (BNF), LL(1) | [Fase 2](https://claude.ai/artifact/PrshcRhm6MHyzobVZC6vGY) |
-| 3. Implementación | El analizador en Python | Lexer por matriz + parser descendente recursivo | Este código |
+| Fase | Qué define | Herramienta formal |
+| --- | --- | --- |
+| 1. Formalismo léxico | Qué piezas (tokens) existen | Alfabeto, expresiones regulares, AFD |
+| 2. Estructura sintáctica | En qué orden pueden ir los tokens | Gramática independiente del contexto (BNF), LL(1) |
+| 3. Implementación | El analizador en Python | Lexer por matriz + parser descendente recursivo |
 
 ---
 
