@@ -1,0 +1,7 @@
+# Cada linea tiene un error sintactico distinto
+despegar 2
+girar 90;
+si (altura > 2) girar 45;
+G1 X (lado + 3;
+lado = * 4;
+velocidad 5;

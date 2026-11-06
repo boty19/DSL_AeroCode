@@ -1,0 +1,10 @@
+# Mision completa
+despegar 2.5;
+lado = (10 + 2) * 3 / 4;
+repetir 4 { G01 X lado Y-5 Z2.5; girar 90; }
+si (bateria <= 20) { aterrizar; } sino { esperar 1; }
+si (altura >= 100) { velocidad 2; }
+si (lado == 9) { G0 X0; }
+si (lado != 0) { girar 45; }
+si (altura < 5) { despegar 3; }
+si (bateria > 50) { velocidad 5; }

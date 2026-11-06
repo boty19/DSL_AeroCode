@@ -1,0 +1,5 @@
+# Cada linea tiene un error lexico distinto
+G;
+despegar 3.;
+si (!bateria) { aterrizar; }
+velocidad @ 2;

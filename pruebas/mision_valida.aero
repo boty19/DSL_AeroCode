@@ -1,0 +1,16 @@
+# Patrulla de bodega
+despegar 2.5;
+velocidad 3;
+lado = 10;
+
+repetir 4 {
+    G1 X lado Y0 Z2.5;
+    girar 90;
+}
+
+si (bateria < 20) {
+    aterrizar;
+} sino {
+    G0 X0 Y(lado * 2 - 5);
+    esperar 1.5;
+}
