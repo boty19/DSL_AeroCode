@@ -35,7 +35,7 @@ El proyecto tiene tres fases. Cada una se apoya en la anterior:
 
 ### Alfabeto Σ
 
-Σ = Σ_lex ∪ Σ_txt. Σ_lex son los 60 símbolos que pueden formar tokens; Σ_txt son los demás caracteres, que solo se admiten dentro de comentarios.
+Σ = Σ_lex ∪ Σ_txt es finito y no vacío: son los 1.114.112 puntos de código de Unicode. Σ_lex son los 60 símbolos que pueden formar tokens; Σ_txt son los 1.114.052 restantes, que solo se admiten dentro de comentarios. Un programa es una cadena w ∈ Σ*.
 
 | Conjunto | Contenido | Cantidad |
 | --- | --- | --- |
@@ -159,20 +159,7 @@ La precedencia queda así: `*` y `/` se aplican antes que `+` y `-`, los operado
 
 Lee un programa AeroCode y muestra su árbol de derivación o la lista de errores.
 
-### Uso
-
-#### Interfaz gráfica
-
-```
-python interfaz.py
-```
-
-- **Editor** con números de línea y colores según el tipo de token (el resaltado usa el mismo lexer).
-- **Insertar instrucción:** un formulario por instrucción (despegar, girar, mover G0/G1, repetir, si/sino…). Cada campo se valida con el lexer y el parser, y el botón *Insertar* solo se activa si el código resultante es válido.
-- **Análisis automático** mientras se escribe, o con F5. Pestañas de *Resultado* (doble clic en un error lleva a la línea), *Tokens*, *Árbol de derivación* y *Ayuda del lenguaje*.
-- Abrir y guardar archivos `.aero`, y cargar los programas de `pruebas/` desde el menú *Ejemplos*.
-
-#### Línea de comandos
+### Uso (por consola)
 
 ```
 python main.py pruebas/mision_valida.aero
@@ -189,7 +176,6 @@ python pruebas.py
 | `parser.py` | Parser descendente recursivo LL(1): un método por no terminal, comentarios P1 a P39 | Fase 2, gramática final y tabla LL(1) |
 | `arbol.py` | Nodos del árbol, impresión en texto y exportación a Graphviz | Fase 2, árbol de derivación |
 | `main.py` | Lee el archivo, ejecuta léxico y sintáctico y muestra el resultado | — |
-| `interfaz.py` | Interfaz gráfica (tkinter): editor, formularios de inserción, tokens, errores y árbol | Usa `lexer.py` y `parser.py` sin cambios |
 | `pruebas.py` | 11 pruebas automáticas | Trazas de las Fases 1 y 2 |
 | `pruebas/*.aero` | Programas válidos y con errores | — |
 
