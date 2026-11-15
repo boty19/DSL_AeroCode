@@ -165,6 +165,8 @@ Lee un programa AeroCode y muestra su árbol de derivación o la lista de errore
 python main.py pruebas/mision_valida.aero
 python main.py pruebas/mision_valida.aero --tokens
 python main.py pruebas/mision_valida.aero --dot arbol.dot
+python main.py pruebas/errores_lexicos.aero
+python main.py pruebas/errores_sintacticos.aero
 python pruebas.py
 ```
 
